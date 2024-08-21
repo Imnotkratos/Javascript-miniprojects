@@ -1,4 +1,4 @@
-class Peronsa{
+class Persona{
   constructor(nombre,edad,dni){
     this.nombre = nombre;
     this.edad = edad;
@@ -109,7 +109,13 @@ class Administrador extends Persona{
     }
   }
 }
-  
+
+//Pruebas
+estudiante = new Estudiante("Stefano",19,9127412,"Ingenieria de Sistemas");
+docente = new Docente("Pepito",1142,124214,"Desarrollador de software");
+
+//Contraseña incorrecta bota error
+admin = new Administrador("Zzz",12,12345,12);
 
 
 
