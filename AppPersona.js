@@ -58,10 +58,58 @@ class Estudiante extends Persona{
       }
     }
   }
-  
-  
 
+  verInfo(){
+    console.log("Nombre: "+ this.nombre + " // "
+               + "Edad: " + this.edad + " // "
+               + "DNI: " + this.dni + " // "
+               + "Carrera: " + this.carrera);
+  }
+    
 }
+
+class Docente extends Persona{
+  constructo(nombre,edad,dni,especialidad){
+    super(nombre,edad,dni);
+    this.especialidad = especialidad;
+  }
+  getEspecialidad(){
+    return this._especialidad;
+  }
+  setEspecialidad(new_especialidad){
+    this._especialidad = new_especialidad;
+  }
+
+  verInfo(){
+    console.log("Nombre: "+ this.nombre + " // "
+               + "Edad: " + this.edad + " // "
+               + "DNI: " + this.dni + " // "
+               + "Especialidad: " + this.especialidad);
+  }
+}
+
+class Administrador extends Persona{
+  constructor(nombre,edad,dni,code){
+    super(nombre,edad,dni);
+    this.code = code;
+  }
+  getCode(){
+    return this._code;
+  }
+  setCode(new_code){
+    this._code = new_code;
+  }
+  verificarCode(){
+    codigo = 123456789;
+    if(this.code = codigo){
+      console.log("Bienvenido/a " + this.nombre);
+    }
+    else{
+      console.error("Codigo incorrecto.");
+    }
+  }
+}
+  
 
 
 
